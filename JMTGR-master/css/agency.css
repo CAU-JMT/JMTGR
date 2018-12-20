@@ -302,6 +302,10 @@ header.masthead .intro-text .intro-heading {
   z-index: 2;
 }
 
+#list * {
+  z-index: 2;
+}
+
 @media (min-width: 767px) {
   #portfolio .portfolio-item {
     margin: 0 0 30px;
@@ -374,4 +378,8 @@ ul.social-buttons li a {
 
 ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
   background-color: #fed136;
+}
+
+.pagination {
+  margin-bottom: 15px;
 }

@@ -27,45 +27,20 @@
 
   <body id="page-top">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-      <div class="container">
-          <?php echo "<a class=navbar-brand js-scroll-trigger href=index.php>JMTGR</a>"; ?>
-        <!-- <a class="navbar-brand js-scroll-trigger" href="main.php">JMTGR</a> -->
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          Menu
-          <i class="fas fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav text-uppercase ml-auto">
-            <li class="nav-item">
-              <?php echo "<a class=nav-link js-scroll-trigger href=main.php>Login</a>"; ?>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Header -->
-    <header class="masthead">
-      <div class="container">
-        <div class="intro-text">
-          <div class="intro-heading text-uppercase">  </div>
-        </div>
-      </div>
-    </header>
-
+    <?php
+      include('navbar.html');
+    ?>
 
     <!-- Login -->
     <section class="bg-light" id="login">
       <form method="post" action="login_check.php">
         <div class="contentId">
-          <label for="id">ID </label>
-          <input type="text" name="id"/>
+          <label for="input_id">ID </label>
+          <input type="text" name="input_id"/>
         </div>
-        <div>
-          <label for="contentPw">PW </label>
-          <input type="password" name="pw"/>
+        <div class="contentPw">
+          <label for="input_pw">PW </label>
+          <input type="password" name="input_pw"/>
         </div>
 
         <div class="button">
@@ -73,48 +48,16 @@
         </div>
 
       </form>
-      <?php echo "<a href=SignUpPage.php>SignUp</a>"; ?>
+      <?php echo "<a href=signUpPage.php>SignUp</a>"; ?>
+      <p></p>
+      <?php include 'naver_login.php'; ?>
+      <a href="<?php echo $apiURL ?>"><img height="50" src="../img/naverLginBtn/succeed_green.PNG"/></a>
+
     </section>
 
-    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <span class="copyright">Copyright &copy; Your Website 2018</span>
-          </div>
-          <div class="col-md-4">
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-4">
-            <ul class="list-inline quicklinks">
-              <li class="list-inline-item">
-                <a href="#">Privacy Policy</a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">Terms of Use</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <?php
+      include('footer.html');
+    ?>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
